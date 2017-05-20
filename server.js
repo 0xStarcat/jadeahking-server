@@ -24,6 +24,9 @@ app.get('/stuff/:project', (req, res) => {
     case 'r2r':
       res.sendFile(path.resolve(__dirname, '../some_forms', 'index.html'));
       break
+      case 'r2r/b':
+        res.sendFile(path.resolve(__dirname, '../some_forms', 'index-B.html'));
+        break
     default:
       res.sendFile(path.resolve(__dirname, './', 'NotFound.html'));
       break
