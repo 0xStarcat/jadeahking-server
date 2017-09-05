@@ -4,7 +4,8 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 
-const app = express();
+const app = express()
+  .use(vhost('blog.jeffahking.com', require('/path/to/m').app));
 
 var port = 8080
 // Setup logger
