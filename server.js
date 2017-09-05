@@ -3,10 +3,10 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const vhost = require('vhost')
+const subdomain = require('express-subdomain');
 
 const app = express()
-  .use(vhost('blog.jeffahking.com', require('/var/www/blog/_site/index.html').app));
+  .use(subdomain('blog', express.static('/var/www/blog/_site/index.html')));
 
 var port = 8080
 // Setup logger
