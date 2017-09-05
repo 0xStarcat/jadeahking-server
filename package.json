@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.15.2",
     "morgan": "^1.8.1",
-    "mustache-express": "^1.2.4"
+    "mustache-express": "^1.2.4",
+    "vhost": "^3.0.2"
   },
   "devDependencies": {},
   "scripts": {

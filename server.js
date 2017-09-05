@@ -3,6 +3,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const vhost = require('vhost')
 
 const app = express()
   .use(vhost('blog.jeffahking.com', require('/var/www/blog/_site').app));
