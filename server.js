@@ -6,7 +6,7 @@ const path = require('path');
 const vhost = require('vhost')
 
 const app = express()
-  .use(vhost('blog.jeffahking.com', require('/var/www/blog/_site').app));
+  .use(vhost('blog.jeffahking.com', require('/var/www/blog/_site/index.html').app));
 
 var port = 8080
 // Setup logger
