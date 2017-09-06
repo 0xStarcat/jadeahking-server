@@ -6,7 +6,7 @@ const path = require('path');
 const subdomain = require('express-subdomain');
 
 const app = express()
-  .use(subdomain('blog', express.static('/var/www/blog/_site/index.html')));
+  // .use(subdomain('blog', express.static('/var/www/blog/_site/index.html')));
 
 var port = 8080
 // Setup logger
