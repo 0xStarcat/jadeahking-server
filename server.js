@@ -22,6 +22,7 @@ app.use(express.static('index.html', process.env.STARCATXYZ_WEBROOT))
 app.use('/static', express.static(path.resolve(__dirname, '../nyc_data/build/static')))
 // Always return the main index.html, so react-router render the route in the client
 app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
+  console.log(process.env.STARCATXYZ_WEBROOT + 'index.html')
   res.sendFile(process.env.STARCATXYZ_WEBROOT + 'index.html')
 })
 
