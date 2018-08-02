@@ -18,7 +18,8 @@ app.use(
 // Serve multiple static assets
 // http://stackoverflow.com/questions/5924072/express-js-cant-get-my-static-files-why
 app.use(express.static(path.resolve(__dirname, '../project-fluffypurrkins/src/Client/Build')))
-app.use('/top-secret/public', express.static(path.resolve(__dirname, '../some_forms/public')))
+
+app.use('/static', express.static(path.resolve(__dirname, '../nyc_data/build/static')))
 // Always return the main index.html, so react-router render the route in the client
 app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
   res.sendFile(path.resolve(__dirname, '../project-fluffypurrkins/src/Client/Build', 'index.html'))
@@ -27,7 +28,7 @@ app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
 app.get('/top-secret/:project', (req, res) => {
   switch (req.params.project) {
     case 'nyc-data':
-      res.sendFile('/var/www/nyc_data/build/index.html')
+      res.sendFile(path.resolve(__dirname, '../nyc_data/build/', 'index.html'))
       break
     default:
       res.sendFile(path.resolve(__dirname, './', 'NotFound.html'))
