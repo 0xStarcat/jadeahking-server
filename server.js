@@ -26,7 +26,7 @@ app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
 })
 
 app.get('/slides/freelancing', (req, res) => {
-  res.sendFile('/var/www/freelancing_presentation/index.html')
+  res.sendFile('/var/www/freelance_presentation/index.html')
 })
 
 app.get('*', function(req, res) {
