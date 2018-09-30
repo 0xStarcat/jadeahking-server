@@ -33,6 +33,11 @@ app.get('/slides/freelancing/cards', (req, res) => {
   res.sendFile('/var/www/freelance_presentation/card_index.html')
 })
 
+app.get('/slides/freelancing/cards/:card', (req, res) => {
+  res.sendFile('/var/www/freelance_presentation/' + params["card"].split('.html')[0] + '.html')
+})
+
+
 app.get('*', function(req, res) {
   res.sendFile(path.resolve(__dirname, './', 'NotFound.html'))
 })
