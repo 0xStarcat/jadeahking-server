@@ -24,7 +24,7 @@ app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
   res.sendFile('/var/www/starcat.xyz/Build/index.html')
 })
 
-app.use(express.static(path.resolve(__dirname, '../freelance_presentation')))
+app.use('/slides', express.static(path.resolve(__dirname, '../freelance_presentation')))
 app.get('/slides/freelancing', (req, res) => {
   res.sendFile('/var/www/freelance_presentation/index.html')
 })
