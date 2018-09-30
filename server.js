@@ -25,17 +25,6 @@ app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
   res.sendFile('index.html', process.env.STARCATXYZ_WEBROOT)
 })
 
-app.get('/top-secret/:project', (req, res) => {
-  switch (req.params.project) {
-    case 'nyc-data':
-      res.sendFile(path.resolve(__dirname, '../nyc_data/build/', 'index.html'))
-      break
-    default:
-      res.sendFile(path.resolve(__dirname, './', 'NotFound.html'))
-      break
-  }
-})
-
 app.get('*', function(req, res) {
   res.sendFile(path.resolve(__dirname, './', 'NotFound.html'))
 })
