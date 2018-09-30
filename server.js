@@ -34,7 +34,7 @@ app.get('/slides/freelancing/cards', (req, res) => {
 })
 
 app.get('/slides/freelancing/cards/:card', (req, res) => {
-  res.sendFile('/var/www/freelance_presentation/' + req.params["card"]
+  res.sendFile('/var/www/freelance_presentation/' + req.params["card"])
 })
 
 
