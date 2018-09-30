@@ -19,12 +19,12 @@ app.use(
 // http://stackoverflow.com/questions/5924072/express-js-cant-get-my-static-files-why
 app.use(express.static('/var/www/starcat.xyz/Build'))
 
-app.use('/static', express.static(path.resolve(__dirname, '../nyc_data/build/static')))
 // Always return the main index.html, so react-router render the route in the client
 app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
   res.sendFile('/var/www/starcat.xyz/Build/index.html')
 })
 
+app.use(express.static(path.resolve(__dirname, '../freelance_presentation')))
 app.get('/slides/freelancing', (req, res) => {
   res.sendFile('/var/www/freelance_presentation/index.html')
 })
