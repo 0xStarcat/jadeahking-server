@@ -20,7 +20,7 @@ app.use(
 app.use(express.static('/var/www/starcat.xyz/Build'))
 
 // Always return the main index.html, so react-router render the route in the client
-app.get(['/', '/about', '/cv', '/contact'], (req, res) => {
+app.get(['/', '/about', '/cv', '/projects', '/contact'], (req, res) => {
   res.sendFile('/var/www/starcat.xyz/Build/index.html')
 })
 
